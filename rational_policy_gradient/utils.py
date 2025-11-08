@@ -17,13 +17,13 @@ from jaxmarl.viz.overcooked_visualizer import OvercookedVisualizer
 from jaxmarl.wrappers.baselines import LogWrapper, MPELogWrapper
 from PIL import Image
 
-from rational_policy_optimization.wrappers import registration_wrapper
-from rational_policy_optimization.wrappers.env_wrappers import (
+from rational_policy_gradient.wrappers import registration_wrapper
+from rational_policy_gradient.wrappers.env_wrappers import (
     ConcatenatePlayerSpaces,
     FixSpaceAPI,
     HanabiMod,
 )
-from rational_policy_optimization.wrappers.world_state import make_world_state_wrapper
+from rational_policy_gradient.wrappers.world_state import make_world_state_wrapper
 
 
 class HanabiActor(nn.Module):

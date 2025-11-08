@@ -15,14 +15,14 @@ from jaxmarl.environments.overcooked import (
 )
 from omegaconf import OmegaConf
 
-from rational_policy_optimization.extra_environments import (
+from rational_policy_gradient.extra_environments import (
     overcooked_layouts as extra_overcooked_layouts,
 )
-from rational_policy_optimization.root import CONFIG_DIR, MODEL_DIR
-from rational_policy_optimization.rpg_algs import make_rpg_alg
-from rational_policy_optimization.utils import Actor as NonHanabiActor
-from rational_policy_optimization.utils import Critic as NonHanabiCritic
-from rational_policy_optimization.utils import (
+from rational_policy_gradient.root import CONFIG_DIR, MODEL_DIR
+from rational_policy_gradient.rpg_algs import make_rpg_alg
+from rational_policy_gradient.utils import Actor as NonHanabiActor
+from rational_policy_gradient.utils import Critic as NonHanabiCritic
+from rational_policy_gradient.utils import (
     HanabiActor,
     HanabiCritic,
     Transition,
@@ -36,7 +36,7 @@ from rational_policy_optimization.utils import (
     wandb_visualize,
     wrap_env,
 )
-from rational_policy_optimization.wrappers import registration_wrapper
+from rational_policy_gradient.wrappers import registration_wrapper
 
 overcooked_layouts = {**base_overcooked_layouts, **extra_overcooked_layouts}
 

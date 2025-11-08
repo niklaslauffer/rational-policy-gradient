@@ -1,6 +1,6 @@
 import jaxmarl
 
-from rational_policy_optimization.extra_environments import (
+from rational_policy_gradient.extra_environments import (
     ExtensiveForm,
     InTheGrid_2p_independent,
     InTheGrid_2p_sabotage,

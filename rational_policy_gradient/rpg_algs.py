@@ -1,6 +1,6 @@
 """A library of preconstructed Rational Policy Optimization Algorithms"""
 
-from rational_policy_optimization.utils import RPO_Edge
+from rational_policy_gradient.utils import RPO_Edge
 
 
 def make_rpg_alg(config):

@@ -11,10 +11,10 @@ import pytest
 import wandb
 from omegaconf import OmegaConf
 
-from rational_policy_optimization import utils
-from rational_policy_optimization.rpg import *
-from rational_policy_optimization.rpg_algs import *
-from rational_policy_optimization.wrappers import registration_wrapper
+from rational_policy_gradient import utils
+from rational_policy_gradient.rpg import *
+from rational_policy_gradient.rpg_algs import *
+from rational_policy_gradient.wrappers import registration_wrapper
 
 
 def tree_slice(tree, idx):

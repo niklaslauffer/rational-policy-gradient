@@ -13,5 +13,5 @@ pip install -e .[gpu,dev]
 
 Simple command to verify that code runs:
 ```
-python rational_policy_optimization/rpg.py --config-name=rpg_overcooked
+python rational_policy_gradient/rpg.py --config-name=rpg_overcooked
 ```
