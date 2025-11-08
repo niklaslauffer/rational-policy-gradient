@@ -1,0 +1,40 @@
+"LR": {"MANIPULATOR": 0.004, "OUT_BASE": 0.0001, "IN_BASE": 0.0004, "CRITIC": 0.005}
+"HIDDEN_SIZES": [64,64]
+"NUM_ENVS": 256
+"NUM_STEPS": 80
+"TOTAL_TIMESTEPS": 3e8
+"UPDATE_EPOCHS": {"MANIPULATOR": 1, "BASE": 1}
+"NUM_MINIBATCHES": {"MANIPULATOR": 1, "BASE": 1}
+"GAMMA": 0.99
+"GAE_LAMBDA": 0.99
+"CLIP_EPS": {"MANIPULATOR": 0.5, "BASE": 0.5, "CRITIC": 0.5}
+"ENT_COEF": {"MANIPULATOR": 0.0, "BASE": 0.0}
+"MAX_GRAD_NORM": {"MANIPULATOR": .5, "OUT_BASE": .5, "IN_BASE": 'unused',"CRITIC": .5}
+"ACTIVATION": "tanh"
+"ENV_NAME": "storm_2p_small"
+"ENV_KWARGS": 
+    "num_inner_steps": 20
+    "num_outer_steps": 1
+    "num_agents": 2
+    "fixed_coin_location": True
+    "freeze_penalty": 5
+"PAYOFF_MATRIX": [[[1, 0], [0, 1]], [[1, 0], [0, 1]]]
+"ANNEAL_LR": False
+"CHECKPOINT_INTERVAL": 5000
+"SEED": 6
+    
+# RPG Params
+"N_LOOKAHEAD": 1
+"NUM_PARTICLES": 2
+"OFF_DIAG_FACTOR": 0.5
+"DICE_LAMBDA": .99
+"PARTNERPLAY_RATIO": 0.15
+"RPG_ALG": "doublesided_RAD"
+"VICTIM_PARAM_PATH": ""
+"BASE_ADAM": True
+
+
+# WandB Params
+"PROJECT": "rpg"
+"WANDB_MODE" : "online"
+"TAGS": ["storm"]

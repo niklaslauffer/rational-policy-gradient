@@ -1,0 +1,36 @@
+"LR": {"CARROT": 0.005, "OUT_HORSE": 5e-4, "IN_HORSE": .01, "CRITIC": 5e-4}
+"NUM_ENVS": 512
+"NUM_STEPS": 128
+"TOTAL_TIMESTEPS": 2e8
+"UPDATE_EPOCHS": {"CARROT": 1, "HORSE": 1}
+"NUM_MINIBATCHES": {"CARROT": 1, "HORSE": 1}
+"GAMMA": 0.95
+"GAE_LAMBDA": 0.95
+"CLIP_EPS": {"CARROT": 0.5, "HORSE": 0.5, "CRITIC": 0.5}
+"ENT_COEF": {"CARROT": 0.0, "HORSE": 0.0}
+"VF_COEF": {"CARROT": 0.5, "HORSE": 0.5}
+"MAX_GRAD_NORM": {"CARROT": 0.5, "OUT_HORSE": 0.5, "IN_HORSE": 'unused', "CRITIC": .5}
+"ACTIVATION": "relu"
+"ENV_NAME": "hanabi"
+"ENV_KWARGS":
+    "num_colors": 4
+    "num_ranks": 4
+    "num_cards_of_rank": [3, 2, 2, 1]
+"ANNEAL_LR": False
+"SEED": 3
+CHECKPOINT_INTERVAL: 10000
+REW_SHAPING: False
+
+# RPG Params
+"N_LOOKAHEAD": 1
+"NUM_PARTICLES": 2
+"OFF_DIAG_FACTOR": 0.25
+"DICE_LAMBDA": .99
+"HORSEPLAY_RATIO": 0.1
+"RPPO_ALG": "doublesided_RAD"
+"HORSE_ADAM": True
+
+# WandB Params
+"PROJECT": "rpg"
+"WANDB_MODE" : "online"
+"TAGS": ["hanabi"]

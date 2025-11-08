@@ -1,0 +1,28 @@
+"LR": {"CARROT": 0.000005, "OUT_HORSE": 0.2, "IN_HORSE": .2, "REGULARIZER_HORSE": 0.00}
+"NUM_ENVS": 23
+"NUM_STEPS": 19
+"TOTAL_TIMESTEPS": 3e7
+"UPDATE_EPOCHS": {"CARROT": 1, "HORSE": 1}
+"NUM_MINIBATCHES": {"CARROT": 1, "HORSE": 1}
+"GAMMA": 0.99
+"GAE_LAMBDA": 1.0
+"CLIP_EPS": {"CARROT": 100, "HORSE": 100}
+"ENT_COEF": {"CARROT": 0.0, "HORSE": 0.0}
+"VF_COEF": {"CARROT": 0.0, "HORSE": 0.0}
+"MAX_GRAD_NORM": {"CARROT": .5, "OUT_HORSE": .5, "IN_HORSE": 'unused'}
+"ACTIVATION": "tanh"
+"ENV_NAME": "storm_2p"
+"ENV_KWARGS": 
+    "num_inner_steps": 20
+    "num_outer_steps": 1
+    "num_agents": 2
+    "fixed_coin_location": True
+    "freeze_penalty": 5
+"PAYOFF_MATRIX": [[[1, 0], [0, 1]], [[1, 0], [0, 1]]]
+"ANNEAL_LR": False
+
+"N_LOOKAHEAD": 1
+"NUM_PARTICLES": 1
+"OFF_DIAG_FACTOR": 0.5
+"DICE_LAMBDA": 0.99
+"HORSEPLAY_RATIO": 0.4

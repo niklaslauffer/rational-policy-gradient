@@ -1,0 +1,33 @@
+"LR": {"CARROT": 0.01, "OUT_HORSE": 0.01, "IN_HORSE": 0.05, "CRITIC": 0.05}
+"HIDDEN_SIZES": [4,4]
+"NUM_ENVS": 32
+"NUM_STEPS": 1
+"TOTAL_TIMESTEPS": 1e5
+"UPDATE_EPOCHS": {"CARROT": 1, "HORSE": 1}
+"NUM_MINIBATCHES": {"CARROT": 1, "HORSE": 1}
+"GAMMA": 0.99
+"GAE_LAMBDA": 0.99
+"CLIP_EPS": {"CARROT": 100, "HORSE": 100, "CRITIC": 0.5}
+"ENT_COEF": {"CARROT": 0.0, "HORSE": 0.0}
+"MAX_GRAD_NORM": {"CARROT": 0.5, "OUT_HORSE": 0.5, "IN_HORSE": 'unused', "CRITIC": 0.5}
+"ACTIVATION": "sigmoid"
+"ENV_NAME": "normal_form"
+"ENV_KWARGS": {}
+"ANNEAL_LR": False
+"SEED": 0
+"CHECKPOINT_INTERVAL": 100
+
+# Carrot+Horse Params
+"N_LOOKAHEAD": 1
+"NUM_PARTICLES": 2
+"OFF_DIAG_FACTOR": 0.25
+"DICE_LAMBDA": .95
+"HORSEPLAY_RATIO": 0.00
+"RPG_ALG": "doublesided_RAD"
+"HORSE_ADAM": False
+
+# WandB Params
+
+"PROJECT": "rational_optimization"
+"WANDB_MODE" : "disabled"
+"TAGS": ["rational_search", "extensive_form"]

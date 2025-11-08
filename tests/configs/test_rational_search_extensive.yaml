@@ -1,0 +1,30 @@
+"LR": {"CARROT": .0002, "OUT_HORSE": 0.1, "IN_HORSE": .1}
+"NUM_ENVS": 1048
+"NUM_STEPS": 6
+"TOTAL_TIMESTEPS": 6e6
+"UPDATE_EPOCHS": {"CARROT": 1, "HORSE": 1}
+"NUM_MINIBATCHES": {"CARROT": 1, "HORSE": 1}
+"GAMMA": 0.99
+"GAE_LAMBDA": 0.95
+"CLIP_EPS": {"CARROT": 100, "HORSE": 100}
+"ENT_COEF": {"CARROT": 0.0, "HORSE": 0.0}
+"VF_COEF": {"CARROT": 0.5, "HORSE": 0.5}
+"MAX_GRAD_NORM": {"CARROT": 100, "OUT_HORSE": 100, "IN_HORSE": 'unused'}
+"ACTIVATION": "tanh"
+"ENV_NAME": "normal_form"
+"ENV_KWARGS": {}
+"ANNEAL_LR": False
+"SEED": 0
+
+"N_LOOKAHEAD": 1
+"DICE_LAMBDA": 0.95
+"HORSEPLAY_COEF": 1.0
+
+# WandB Params
+
+"PROJECT": "rational_optimization"
+"WANDB_MODE" : "disabled"
+"TAGS": ["rational_search", "extensive_form"]
+
+
+

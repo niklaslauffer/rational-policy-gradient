@@ -1,0 +1,76 @@
+[build-system]
+requires = ["setuptools"]
+
+[project]
+name = "rational_policy_optimization"
+version = "0.0.1"
+description = "TODO"
+authors = [{ name = "Author", email = "author@example.com" }]
+# Dynamically include the README file, as specified in the `tool.setuptools.dynamic` section.
+dynamic = ["readme"]
+requires-python = "==3.11.11"
+dependencies = [
+    "jax[cuda12]==0.4.30",
+    "jaxlib>=0.4.16.0,<=0.4.30",
+    "flax==0.8.5",
+    "chex==0.1.84",
+    "optax==0.1.7",
+    "distrax==0.1.5",
+    "wandb",
+    "pytest",
+    "numpy>=1.26.1",
+    "hydra-core>=1.3.2",
+    "omegaconf>=2.3.0",
+    "matplotlib>=3.8.3",
+    "pillow>=10.2.0",
+    "tqdm>=4.66.0",
+    "scipy<=1.12",
+    "jaxmarl@git+https://github.com/FLAIROx/JaxMARL",
+    "imageio>=2.37.0",
+    "ipykernel>=6.29.5",
+    "ipympl>=0.9.7",
+]
+
+[tool.setuptools.dynamic]
+readme = { file = ["README.md"], content-type = "text/markdown" }
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "flake8",
+    "pep8-naming",
+    "mypy",
+    "pytest",
+    "pytest-timeout",
+    "isort",
+]
+gpu = [
+    "jax[cuda12]==0.4.30",
+]
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$' # Includes .pyi stub files
+exclude = 'strategic-knowledge-MARL'
+
+[tool.isort]
+profile = "black"
+known_first_party = ["rational_policy_optimization"]
+known_third_party = ["ray", "torch", "wandb"]
+
+# Should look into the below more
+[tool.pytest.ini_options]
+timeout = 60
+testpaths = ["tests"]
+markers = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "ruff>=0.11.2",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["rational_policy_optimization*"]
+exclude = ["experiments*"]
