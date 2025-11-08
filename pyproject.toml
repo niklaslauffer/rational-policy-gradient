@@ -2,7 +2,7 @@
 requires = ["setuptools"]
 
 [project]
-name = "rational_policy_optimization"
+name = "rational_policy_gradient"
 version = "0.0.1"
 description = "TODO"
 authors = [{ name = "Author", email = "author@example.com" }]
@@ -55,7 +55,7 @@ exclude = 'strategic-knowledge-MARL'
 
 [tool.isort]
 profile = "black"
-known_first_party = ["rational_policy_optimization"]
+known_first_party = ["rational_policy_gradient"]
 known_third_party = ["ray", "torch", "wandb"]
 
 # Should look into the below more
@@ -72,5 +72,5 @@ dev = [
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["rational_policy_optimization*"]
+include = ["rational_policy_gradient*"]
 exclude = ["experiments*"]
