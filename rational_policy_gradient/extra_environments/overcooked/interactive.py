@@ -28,14 +28,14 @@ def step(env, action, extras):
     other_action = pi.sample(seed=sample_key)
 
     actions = {"agent_0": jnp.array(action), "agent_1": other_action}
-    print("Actions : ", actions)
+    # print("Actions : ", actions)
     key, step_key = jax.random.split(key)
     obs, state, reward, done, info = env.step_env(step_key, extras["state"], actions)
     extras["obs"] = obs
     extras["state"] = state
-    print(
-        f"t={state.time}: reward={reward['agent_0']}, agent_dir={state.agent_dir_idx}, agent_inv={state.agent_inv}, done = {done['__all__']}, pos={state.agent_pos}"
-    )
+    # print(
+    #     f"t={state.time}: reward={reward['agent_0']}, agent_dir={state.agent_dir_idx}, agent_inv={state.agent_inv}, done = {done['__all__']}, pos={state.agent_pos}"
+    # )
 
     if extras["debug"]:
         layers = [f"player_{i}_loc" for i in range(2)]
@@ -60,8 +60,8 @@ def step(env, action, extras):
                 "urgency",
             ]
         )
-        print("obs_shape: ", obs["agent_0"].shape)
-        print("OBS: \n", obs["agent_0"])
+        # print("obs_shape: ", obs["agent_0"].shape)
+        # print("OBS: \n", obs["agent_0"])
         debug_obs = jnp.transpose(obs["agent_0"], (2, 0, 1))
         for i, layer in enumerate(layers):
             print(layer)
@@ -78,7 +78,7 @@ def step(env, action, extras):
 
 
 def key_handler(env, extras, event):
-    print("pressed", event.key)
+    # print("pressed", event.key)
 
     if event.key == "backspace":
         key, subkey = jax.random.split(extras["rng"])
@@ -113,7 +113,7 @@ def key_handler(env, extras, event):
 
 
 def key_handler_overcooked(env, extras, event):
-    print("pressed", event.key)
+    # print("pressed", event.key)
 
     if event.key == "backspace":
         extras["jit_reset"]((env, extras))
