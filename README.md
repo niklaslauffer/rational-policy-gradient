@@ -1,5 +1,7 @@
 ## Rational Policy Gradient
 
+![RPG explainer](https://rational-policy-gradient.github.io/assets/figures/rpg-fig1.png)
+
 This repository implements the Rational Policy Gradient (RPG) algorithms and supporting environments used in the 2025 NeurIPS paper. It provides experiment code, environment wrappers, utilities, and a small interactive demo to get started.
 
 View our website here: https://rational-policy-gradient.github.io.
@@ -43,26 +45,11 @@ python rational_policy_gradient/rpg.py --config-name=rpg_matrix
 
 If you use this code in your research, please cite:
 
+```
 @inproceedings{lauffer2025rpg,
   title={Robust and Diverse Multi-Agent Learning via Rational Policy Gradient},
   author={Lauffer, Niklas and Shah, Ameesh and Carroll, Micah and Seshia, Sanjit A and Russell, Stuart and Dennis, Michael D},
   booktitle={Advances in Neural Information Processing Systems},
   year={2025}
 }
-# Installation
-
-```
-git clone https://github.com/niklaslauffer/rational-policy-gradient
-conda create -n rpg python=3.11.11 -y
-conda activate rpg
-cd rational-policy-gradient
-pip install -e .[gpu,dev]
-(optional to run on GPU) pip install -U "jax[cuda12]"
-```
-
-### Verify installation
-
-Simple command to verify that code runs:
-```
-python rational_policy_gradient/rpg.py --config-name=rpg_matrix
 ```
